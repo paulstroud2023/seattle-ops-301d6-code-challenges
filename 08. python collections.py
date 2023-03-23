@@ -14,7 +14,7 @@ print("The complete list:", my_strings)
 
 print("The fourth element:", my_strings[3]) # index starts at zero
 
-print("Elements 6-10:", my_strings[5:9])    # list slice
+print("Elements 6-10:", my_strings[5:10])    # list slice
 
 print("Changing element #7 from:", my_strings[6], end=" to ")
 my_strings[6] = "Maine" # new value for element #7
