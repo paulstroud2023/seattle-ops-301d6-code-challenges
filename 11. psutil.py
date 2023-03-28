@@ -15,15 +15,17 @@ cpu_times = psutil.cpu_times()
 
 # print specific times with a corresponding prompt
 # formatting output as f-strings that include the array/variable
-print(f"Time spent by normal processes executing in user mode: {cpu_times.user} sec")
-print(f"Time spent by processes executing in kernel mode: {cpu_times.system} sec")
-print(f"Time when system was idle: {cpu_times.idle} sec")
-print(f"Time spent by priority processes executing in user mode: {cpu_times.nice} sec")
-print(f"Time spent waiting for I/O to complete: {cpu_times.iowait} sec")
-print(f"Time spent for servicing hardware interrupts: {cpu_times.irq} sec")
-print(f"Time spent for servicing software interrupts: {cpu_times.softirq} sec")
-print(f"Time spent by other operating systems running in a virtualized environment: {cpu_times.steal} sec")
-print(f"Time spent running a virtual CPU for guest operating systems under the control of the Linux kernel: {cpu_times.guest} sec")
+print("[ PSUTIL INFO ]")
+print("System/CPU time spent on:")
+print(f"- normal processes executing in user mode: {cpu_times.user} sec")
+print(f"- processes executing in kernel mode: {cpu_times.system} sec")
+print(f"- system idle: {cpu_times.idle} sec")
+print(f"- priority processes executing in user mode: {cpu_times.nice} sec")
+print(f"- waiting for I/O to complete: {cpu_times.iowait} sec")
+print(f"- servicing hardware interrupts: {cpu_times.irq} sec")
+print(f"- servicing software interrupts: {cpu_times.softirq} sec")
+print(f"- other OSs/virtualization: {cpu_times.steal} sec")
+print(f"- running a vCPU for a guest OS: {cpu_times.guest} sec")
 
 
 print("\nDONE")
