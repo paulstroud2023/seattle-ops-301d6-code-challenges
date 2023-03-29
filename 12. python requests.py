@@ -3,7 +3,7 @@
 # Script: Ops 301 Class 12 Ops Challenge Solution
 # Author: Paul Stroud
 # Date of latest revision: 03/28/23
-# Purpose: Python psutil
+# Purpose: Python HTTP requests
 
 
 # Main
