@@ -21,9 +21,6 @@ http_cmd = { 1:requests.get,
              7:requests.options }
 cmd_text = ("GET", "POST", "PUT", "DELETE", "HEAD", "PATCH", "OPTIONS")
 
-#print(http_cmd[1]("http://pypi.org"))
-
-
 # prompt user input
 url = input("Please enter a URL: ")
 
@@ -36,7 +33,7 @@ except:         # catch any exceptions and terminate the scripts with an error m
     exit(1)     # return error code on exit
 
 
-#url = "http://pypi.org"
+# list available commands
 print("This program can perform one of the following HTTP commands:")
 print("\t1 GET")
 print("\t2 POST")
@@ -46,21 +43,24 @@ print("\t5 HEAD")
 print("\t6 PATCH")
 print("\t7 OPTIONS")
 
+# prompt user input
 while True:
-    i = int(input("\nPlease enter the number for the command you wish to perform [1-8]: "))
-    if i in range(1, 8): break
+    i = int(input("\nPlease enter the number for the command to execute [1-8]: "))
+    if i in range(1, 8): break  # if the number is valid, break the loop
 
+# ask user to confirm the operation
 print(f'This command will perform a {cmd_text[i-1]} command on the {url} URL')
 confirm = input("Do you wish to continue? (y/n) ")
-if confirm == "n":
-    exit(0)
+if confirm == "n": exit(0)  # exit the script
 
-    interwebz = http_cmd[i](url)
+interwebz = http_cmd[i](url)    # perform the chosen operation on the URL
 
 print("\nCommand complete!", end="")
+# print the details
 print("\n\tStatus code: ", interwebz.status_code,
       "\n\tCode meaning: ", HTTP_response_codes.responses[interwebz.status_code][0],
       "\n\tDetailed description: ", HTTP_response_codes.responses[interwebz.status_code][1])
 
+print("Job's done!")
 
 # End
