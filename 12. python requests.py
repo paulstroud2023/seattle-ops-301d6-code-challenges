@@ -53,20 +53,14 @@ while True:
 print(f'This command will perform a {cmd_text[i-1]} command on the {url} URL')
 confirm = input("Do you wish to continue? (y/n) ")
 if confirm == "n":
-    exit
+    exit(0)
 
-#try:
     interwebz = http_cmd[i](url)
-#except:
-    # print("The URL is incorrect. Please try again.")
-    # exit(1)
-
-
 
 print("\nCommand complete!", end="")
 print("\n\tStatus code: ", interwebz.status_code,
-       "\n\tCode meaning: ", HTTP_response_codes.responses[interwebz.status_code][0],
-       "\n\tDetailed description: ", HTTP_response_codes.responses[interwebz.status_code][1])
+      "\n\tCode meaning: ", HTTP_response_codes.responses[interwebz.status_code][0],
+      "\n\tDetailed description: ", HTTP_response_codes.responses[interwebz.status_code][1])
 
 
 # End
