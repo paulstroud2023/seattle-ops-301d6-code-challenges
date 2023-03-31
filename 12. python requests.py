@@ -5,6 +5,11 @@
 # Date of latest revision: 03/28/23
 # Purpose: Python HTTP requests
 
+# Additional resources:
+#   HTTP_response_codes.py contains the 'responses' dictionary list with all HTTP status codes
+#   This source file is included in this repo, and the original can also be downloaded from:
+#   https://gist.github.com/bl4de/3086cf26081110383631
+
 
 # Main
 
